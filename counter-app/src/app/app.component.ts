@@ -11,11 +11,17 @@ export class AppComponent {
   count: number = 0;
 
   handleIncrease = () => {
+    if (this.count === 10) {
+      this.count = this.count+10;
+    }
     this.count = this.count+1;
   };
 
   handleDecrease = () => {
-    this.count = this.count - 1;
+    if (this.count > 0) {
+      this.count = this.count - 1;
+    }
+   
   };
 
   handleReset = () => {
