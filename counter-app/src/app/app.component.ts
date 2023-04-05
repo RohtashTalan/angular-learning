@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CounterApp';
+
+  count: number = 0;
+
+  handleIncrease = () => {
+    this.count = this.count+1;
+  };
+
+  handleDecrease = () => {
+    this.count = this.count - 1;
+  };
+
+  handleReset = () => {
+    this.count = 0
+  }
+
+
 }
