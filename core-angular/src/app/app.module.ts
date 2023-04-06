@@ -1,3 +1,5 @@
-export class AppModule {
-    
-}
+import { NgModule } from "@angular/core"
+
+
+
+export class AppModule {}
