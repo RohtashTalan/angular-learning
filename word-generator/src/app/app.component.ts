@@ -12,8 +12,8 @@ export class AppComponent {
   words = '';
   limit = 10;
 
-  handleSlideChange(newLimit: number) {
-    this.limit = newLimit;
+  handleSlideChange(newLimit:any){
+    this.limit = newLimit.target.value
   }
 
   generate() {
