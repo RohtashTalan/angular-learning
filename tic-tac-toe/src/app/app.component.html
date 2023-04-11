@@ -11,10 +11,10 @@
 
 
       <div class="grid">
-        <div>
+        <div *ngFor=" let item of itemArray; index as i ">
           <div class="card">
-            <div class="card-box box">
-              <app-icon></app-icon>
+            <div class="card-box box" (click)="handleClick(i)">
+              <app-icon [iconName]="item" ></app-icon>
             </div>
           </div>
         </div>

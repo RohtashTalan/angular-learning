@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'tic-tac-toe';
 
@@ -13,6 +14,7 @@ export class AppComponent {
   isCross = false;
   itemArray: string[] = new Array(9).fill('empty');
 
+  constructor(private toastr: ToastrService){};
 
   checkIsWinner = () => {
     let winnerLogin = [
@@ -31,7 +33,8 @@ export class AppComponent {
       let [a, b, c] = condition;
       if (this.itemArray[a] === this.itemArray[b] && this.itemArray[a] === this.itemArray[c] &&
         this.itemArray[a] !== 'empty') {
-        return this.itemArray[a]
+        this.winMessage = this.itemArray[a] + " wins the match"
+        return this.toastr.success(this.winMessage)
       }
     }
     return false
@@ -56,7 +59,7 @@ export class AppComponent {
   return
   }
 
-  constructor(private toastr: ToastrService) { }
+
   reloadGame = () => {
     this.winMessage = '';
     this.isCross = false;
