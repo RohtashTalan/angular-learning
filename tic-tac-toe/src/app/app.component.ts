@@ -33,9 +33,13 @@ export class AppComponent {
       let [a, b, c] = condition;
       if (this.itemArray[a] === this.itemArray[b] && this.itemArray[a] === this.itemArray[c] &&
         this.itemArray[a] !== 'empty') {
-        this.winMessage = this.itemArray[a] + " wins the match"
+        this.winMessage = this.itemArray[a] + " won the match"
+        return this.toastr.success(this.winMessage)
+      } else if (this.itemArray[a] !== 'empty' && this.itemArray[b] !== 'empty' && this.itemArray[c] !== 'empty' && !this.itemArray.includes('empty')) {
+        this.winMessage = " no one won the match"
         return this.toastr.success(this.winMessage)
       }
+
     }
     return false
   }
