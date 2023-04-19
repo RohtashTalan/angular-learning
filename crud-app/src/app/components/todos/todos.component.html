@@ -12,7 +12,7 @@
             {{todo.date | date}}
         </span>
         <span>
-           trash
+          <p (click)="deleteTodo(todo)">trash</p> 
         </span>
     </li>
 </ul>
