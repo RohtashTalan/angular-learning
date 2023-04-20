@@ -8,7 +8,7 @@
         <span [ngClass]="{completedTodo: todo.isComplete}">
            {{todo.title | uppercase}}
         </span>
-        <span>
+        <span [ngClass]="{completedTodo: todo.isComplete}">
             {{todo.date | date}}
         </span>
         <span>

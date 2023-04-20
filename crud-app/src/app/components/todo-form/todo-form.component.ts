@@ -23,16 +23,21 @@ ngOnInit(): void {
 }
 
 handleAdd(){
-  const newTodo:Todo = {
-    id: uuidv4(),
-    title: this.todoTitle,
-    date: new Date(),
-    isComplete :false
+  if (this.todoTitle) {
+    const newTodo:Todo = {
+      id: uuidv4(),
+      title: this.todoTitle,
+      date: new Date(),
+      isComplete :false
+    }
+  
+  
+    this.todoService.addTodo(newTodo)
+    this.todoTitle=""
+  } else {
+    
   }
-
-
-  this.todoService.addTodo(newTodo)
-  this.todoTitle=""
+ 
 }
 
 }
