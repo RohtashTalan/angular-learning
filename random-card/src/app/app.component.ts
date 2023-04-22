@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
   }
 
 
-  refressUser(){
+  reloadUser = () => {
     this.userService.getUser().subscribe(
       (user:any) => {
         this.user = user.results[0];

@@ -18,6 +18,12 @@ export class CardComponent implements OnInit {
   @Input()
   user:any;
 
+  @Input() reload:any
+
+
+ 
+  
+
   faEnvelope = faEnvelope;
   faMapMarkedAlt = faMapMarkedAlt
   faPhone = faPhone;
@@ -25,7 +31,7 @@ export class CardComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
 
