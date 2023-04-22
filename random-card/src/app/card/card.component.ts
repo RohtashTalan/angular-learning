@@ -15,10 +15,8 @@ import {
 })
 export class CardComponent implements OnInit {
 
-  @Input()
-  user:any;
-
-  @Input() reload:any
+  @Input()user:any;
+  @Input()reload:any
 
 
  
