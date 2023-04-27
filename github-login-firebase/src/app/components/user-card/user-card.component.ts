@@ -9,8 +9,9 @@ export class UserCardComponent implements OnInit{
 
   @Input() user:any;
   
-
+  
 
   constructor(){}
-  ngOnInit(): void { }
+
+  ngOnInit(): void {}
 }
